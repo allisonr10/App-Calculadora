@@ -58,6 +58,7 @@
 
           <div class="calculadora">
             <input
+              id="resultado"
               type="text"
               class="form-control resultado"
               placeholder="0"
@@ -203,7 +204,10 @@
     </div>
     <script>
       function calcular(tipo, valor) {
-        console.log(tipo, valor);
+        if (tipo === 'acao') {
+        } else if (tipo === 'valor') {
+          document.getElementById('resultado').value += valor;
+        }
       }
     </script>
   </body>
